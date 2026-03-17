@@ -62,7 +62,7 @@ body:not(.page-home) .site-branding img {
 }
 
 .intro-break {
-  line-height: 1.8; /* creates the vertical space */
+  line-height: 1.8;
 }
 
 .spacer{
@@ -71,20 +71,19 @@ body:not(.page-home) .site-branding img {
 
 .about-text p {
   position: relative;
-  text-indent: 20px; /* indent the first line */
+  text-indent: 20px;
   margin: 0;
   line-height: 1.6;
 }
 
-/* vertical line on the first line only */
 .about-text p::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.35em; /* aligns with first line */
-  width: 3px; /* thickness of the line */
-  height: 1em; /* only the first line */
-  background-color: #9BC53D; /* your green */
+  top: 0.35em;
+  width: 3px;
+  height: 1em;
+  background-color: #9BC53D;
   border-radius: 2px;
 }
 
@@ -289,7 +288,7 @@ body:not(.page-home) .nav-circle.home:hover {
   position: absolute;
   inset: 0;
   background: transparent;
-  pointer-events: auto; /* blocks right-click + drag */
+  pointer-events: auto;
 }
 
 .watermark {
@@ -306,7 +305,6 @@ body:not(.page-home) .nav-circle.home:hover {
   transition: opacity 0.3s ease;
 }
 
-/* Watermark becomes visible when captured/printed */
 @media print {
   .watermark {
     opacity: 0.72;
@@ -334,7 +332,7 @@ body:not(.page-home) .nav-circle.home:hover {
 }
 
 .home-what-i-do .image-wrapper {
-  height: 300px; /* bigger shared box */
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -383,7 +381,6 @@ footer {
    ANIMATION CAROUSEL — GROUPED SLIDES, CROSSFADE
 ============================================================ */
 
-/* Outer container */
 .animation-carousel {
   width: 100%;
   max-width: 1200px;
@@ -394,19 +391,17 @@ footer {
   gap: 16px;
 }
 
-/* Fixed-height stage to prevent page jump */
 .carousel-stage {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  min-height: 600px; /* adjust if you want taller/shorter */
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: visible;
 }
 
-/* Each slide: caption above video, stacked, crossfading */
 .carousel-slide {
   position: absolute;
   inset: 0;
@@ -427,7 +422,6 @@ footer {
   pointer-events: auto;
 }
 
-/* Caption above video */
 .carousel-caption {
   font-size: clamp(16px, 1.4vw, 20px);
   color: var(--dark-blue);
@@ -435,7 +429,6 @@ footer {
   font-weight: 500;
 }
 
-/* Video styling */
 .carousel-video {
   width: 400px;
   max-width: 1000px;
@@ -444,8 +437,6 @@ footer {
   border-radius: 10px; 
 }
 
-
-/* Controls */
 .carousel-controls {
   display: flex;
   gap: 20px;
@@ -500,4 +491,59 @@ footer {
 .carousel-controls {
   position: relative;
   z-index: 10;
+}
+
+/* ============================================================
+   MOBILE HEADER + NAV (900px)
+============================================================ */
+@media (max-width: 900px) {
+  body:not(.page-home) header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px clamp(16px, 3vw, 40px);
+    row-gap: 16px;
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-center {
+    order: 3;
+    margin-top: 8px;
+  }
+
+  .circle-nav {
+    margin: 20px 0 0;
+    justify-content: center;
+    padding-inline: clamp(16px, 3vw, 40px);
+  }
+
+  .nav-circles {
+    width: auto;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .nav-circles::before {
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4px;
+  }
+
+  .nav-circle,
+  .page-home .nav-circle {
+    width: clamp(110px, 24vw, 150px) !important;
+    height: clamp(110px, 24vw, 150px) !important;
+    font-size: clamp(16px, 4vw, 22px) !important;
+    font-weight: 400;
+  }
+
+  .nav-circle.home,
+  .page-home .nav-circle.home {
+    transform: scale(1.08) !important;
+  }
 }

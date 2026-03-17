@@ -185,6 +185,25 @@ section {
 /* ============================================================
    RESPONSIVE
 ============================================================ */
+@media (max-width: 900px) {
+  main,
+  footer {
+    padding-inline: 16px;
+  }
+
+  section {
+    border-radius: 28px;
+    margin-block: 24px;
+    padding: 24px;
+  }
+
+  .section-with-border-1,
+  .section-with-border-2,
+  .section-with-border-3 {
+    margin: 24px 16px;
+  }
+}
+
 @media (max-width: 700px) {
   .media-grid--3col,
   .media-grid--4col {

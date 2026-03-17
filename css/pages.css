@@ -302,9 +302,9 @@
 
 .about-hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* balanced columns */
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  padding: 1.8rem 2rem;             /* your original spacing */
+  padding: 1.8rem 2rem;
   border-radius: 16px;
   color: white;
 
@@ -319,11 +319,11 @@
 .about-hero-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;          /* vertical centering */
-  align-items: center;              /* horizontal centering */
+  justify-content: center;
+  align-items: center;
   text-align: center;
 
-  margin: 0 auto;                   /* centers the card in its grid column */
+  margin: 0 auto;
   max-width: 480px;
 
   background: rgba(255,255,255,0.25);
@@ -340,7 +340,7 @@
 
 /* Center the photo */
 .about-hero-photo {
-  margin: 0 auto;                   /* centers the photo block */
+  margin: 0 auto;
   max-width: 260px;
   aspect-ratio: 4 / 5;
   border-radius: 12px;
