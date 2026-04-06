@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,3 +96,102 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Game — Alexander Olson</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/memory-game.css">
+</head>
+
+<body class="page-interactive">
+
+<!-- HEADER -->
+<header>
+  <div class="header-top-row">
+    <div class="header-left">
+      <div class="site-branding">
+        <img src="images/businesses/alexander-design-lab/alexander-design-lab-logo.png" alt="Alexander Design Lab Logo">
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="header-ao-logo">
+        <img src="images/businesses/alexander-olson-logo/ao-logo-white.png" alt="AO Logo">
+      </div>
+    </div>
+  </div>
+
+  <div class="header-center">
+    <nav class="circle-nav">
+      <div class="nav-scale-wrapper">
+        <div class="nav-circles">
+          <a class="nav-circle nav-spacer" aria-hidden="true"></a>
+          <a href="index.html" class="nav-circle home">Home</a>
+          <a href="illustrations.html" class="nav-circle illustration">Illustration</a>
+          <a href="logo-designs.html" class="nav-circle logos">Logos</a>
+          <a href="brand-identity.html" class="nav-circle branding">Branding</a>
+          <a href="temporary-app-page.html" class="nav-circle app">App</a>
+          <a href="animation.html" class="nav-circle animation">Animation</a>
+          <a href="interactive.html" class="nav-circle interactive">Game</a>
+          <a href="about-me.html" class="nav-circle about-me">About Me</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<section class="section-with-border-1">
+<main>
+
+  <div class="memory-wrapper">
+
+    <h1>Memory Game</h1>
+
+    <div class="difficulty-select">
+      <button class="difficulty-btn" data-mode="6">Easy</button>
+      <button class="difficulty-btn" data-mode="8">Medium</button>
+      <button class="difficulty-btn" data-mode="12">Hard</button>
+    </div>
+
+    <div class="scoreboard">
+      <div>Time: <span id="timer">0</span>s</div>
+      <div>Moves: <span id="moves">0</span></div>
+      <div>Matches: <span id="matches">0</span></div>
+    </div>
+
+    <div id="memoryGrid" class="memory-grid"></div>
+
+  </div>
+
+</main>
+</section>
+
+<!-- WIN SCREEN -->
+<div class="win-screen" id="winScreen">
+  <div class="win-box">
+    <h2>You Win!</h2>
+    <div id="recordMsg" class="new-record"></div>
+    <div class="win-stats" id="winStats"></div>
+    <button class="play-again-btn" id="playAgainBtn">Play Again</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p class="p-style-3">&copy; 2026 Alexander Design Lab. All rights reserved.</p>
+</footer>
+
+<!-- EXTERNAL SCRIPT -->
+<script src="js/memory-game.js"></script>
+
+</body>
+</html>
+>>>>>>> dcb3f8c70d3a252ead5d3e782f47f4524ee167ba
